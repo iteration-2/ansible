@@ -11,7 +11,7 @@
 
     - name: print loop values in mapped items
       ansible.builtin.debug:
-        msg: loop values are {{ item }}
+        msg: day is {{ item.name }}, and time is {{ item.time }}
       loop:
         - { name: monday, time: 10AM }
         -  { name: tuesday, time: 11AM }
