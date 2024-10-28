@@ -1,0 +1,18 @@
+- name: test loops concept
+  hosts: localhost
+  tasks:
+    - name: print loop values
+      ansible.builtin.debug:
+        msg: loop values are {{ item }}
+      loop:
+        - monday
+        - tuesday
+        - wednesday
+
+    - name: print loop values in mapped items
+      ansible.builtin.debug:
+        msg: loop values are {{ item }}
+      loop:
+        - { name: monday, time: 10AM }
+        -  { name: tuesday, time: 11AM }
+        -  { name: wednesday, time: 12AM }
