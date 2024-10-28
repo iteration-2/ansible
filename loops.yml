@@ -1,0 +1,10 @@
+- name: test loops concept
+  hosts: localhost
+  tasks:
+    - name: print loop values
+      ansible.builtin.debug:
+        msg: loop values are {{ items }}
+      loop:
+        - monday
+        - tuesday
+        - wednesday
