@@ -3,7 +3,7 @@
   tasks:
     - name: print loop values
       ansible.builtin.debug:
-        msg: loop values are {{ items }}
+        msg: loop values are {{ item }}
       loop:
         - monday
         - tuesday
